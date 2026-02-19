@@ -1,0 +1,29 @@
+"""Default style constants."""
+
+from __future__ import annotations
+
+# Stroke widths
+LIPID_STROKE_WIDTH = 0.6
+LIPID_TAIL_STROKE_WIDTH = 1.4
+MEMBRANE_BG_OPACITY = 0.35
+MEMBRANE_BG_COLOR = "#FDEBD0"
+
+# Geometric shape outline
+GEO_STROKE_COLOR = "#333333"
+GEO_STROKE_WIDTH = 1.2
+GEO_FILL_OPACITY = 0.15
+
+# Annotation
+LABEL_FONT_FAMILY = "Arial, Helvetica, sans-serif"
+LABEL_FONT_SIZE = 14
+LEGEND_FONT_SIZE = 11
+LEGEND_SWATCH_SIZE = 12
+LEGEND_PADDING = 10
+
+# Scissor icon
+SCISSOR_SIZE = 16
+SCISSOR_COLOR = "#E74C3C"
+
+# Pore
+PORE_WATER_COLOR = "#AED6F1"
+PORE_WATER_OPACITY = 0.4

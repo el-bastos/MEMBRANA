@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membrana – Help</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-primary: #111111;
+            --bg-secondary: #1a1a1a;
+            --bg-panel: #2a2a2a;
+            --text-primary: rgba(255,255,255,0.95);
+            --text-secondary: rgba(255,255,255,0.70);
+            --text-muted: rgba(255,255,255,0.40);
+            --accent: #7c5cfc;
+            --accent-hover: #9175ff;
+            --border: rgba(255,255,255,0.08);
+            --border-strong: rgba(255,255,255,0.14);
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 14px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 13px;
+            margin-bottom: 32px;
+        }
+        .back-link:hover { color: var(--accent-hover); }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        .logo svg { flex-shrink: 0; }
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 15px;
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--border-strong);
+            color: var(--accent);
+        }
+        h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+        p { margin-bottom: 12px; }
+        ul, ol { margin-bottom: 12px; padding-left: 24px; }
+        li { margin-bottom: 4px; }
+        code {
+            background: var(--bg-panel);
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .kbd {
+            display: inline-block;
+            background: var(--bg-panel);
+            border: 1px solid var(--border-strong);
+            border-radius: 4px;
+            padding: 1px 6px;
+            font-size: 11px;
+            font-family: inherit;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0 20px;
+            font-size: 13px;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        th {
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        td:first-child { font-weight: 500; }
+        .note {
+            background: rgba(124,92,252,0.08);
+            border-left: 3px solid var(--accent);
+            padding: 10px 14px;
+            border-radius: 0 6px 6px 0;
+            margin: 16px 0;
+            font-size: 13px;
+        }
+        .ref {
+            color: var(--text-secondary);
+            font-size: 12px;
+        }
+        .ref a { color: var(--accent); text-decoration: none; }
+        .ref a:hover { text-decoration: underline; }
+        .credits {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-strong);
+        }
+        .credits p { color: var(--text-secondary); font-size: 13px; }
+        .credits a { color: var(--accent); text-decoration: none; }
+        .credits a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Back to Membrana
+        </a>
+
+        <div class="logo">
+            <svg viewBox="0 0 36 36" fill="none" width="40" height="40">
+                <circle cx="18" cy="18" r="14" stroke="#a78bfa" stroke-width="2.5"/>
+                <circle cx="18" cy="18" r="8" stroke="#7c5cfc" stroke-width="2.5"/>
+            </svg>
+            <h1>Membrana</h1>
+        </div>
+        <p class="subtitle">Publication-quality membrane diagram generator</p>
+
+        <!-- ──────────────────────────────────────────── -->
+        <h2>Overview</h2>
+        <p>
+            Membrana is an interactive tool for creating schematic diagrams of biological membranes.
+            It generates SVG vector graphics suitable for figures in scientific publications, presentations,
+            and educational materials. The diagrams can include lipid bilayers with realistic compositions,
+            transmembrane and peripheral proteins, and annotations such as compartment labels, scale bars,
+            and leaflet markers.
+        </p>
+
+        <!-- ──────────────────────────────────────────── -->
+        <h2>Getting Started</h2>
+        <ol>
+            <li><strong>Choose a shape</strong> from the left navigation rail (Linear, Circle, Ellipse, Cristae, or Bezier).</li>
+            <li><strong>Select a preset</strong> to load a biologically accurate starting configuration, or start from Custom.</li>
+            <li><strong>Adjust parameters</strong> in the right sidebar tabs: membrane geometry, lipid composition, proteins, overlays, and canvas settings.</li>
+            <li><strong>Export</strong> your diagram as SVG or PNG using the buttons in the bottom-right corner.</li>
+        </ol>
+        <div class="note">
+            The preview updates in real time via WebSocket. The status indicator in the footer shows the connection state.
+        </div>
+
+        <!-- ──────────────────────────────────────────── -->
+        <h2>Navigation &amp; Controls</h2>
+
+        <h3>Canvas Interaction</h3>
+        <ul>
+            <li><strong>Scroll</strong> to zoom in/out</li>
+            <li><strong>Alt + drag</strong> to pan the canvas</li>
+            <li><strong>Reset zoom</strong> button in the footer to restore the default view</li>
+        </ul>
+
+        <h3>Bezier Editing</h3>
+        <p>When using the Bezier shape, the preview becomes interactive:</p>
+        <ul>
+            <li><strong>Drag knots</strong> (blue circles) to move control points</li>
+            <li><strong>Drag handle tips</strong> (smaller circles) to reshape the curve tangents</li>
+            <li><span class="kbd">Alt</span> + click a knot to toggle between <em>smooth</em> and <em>corner</em> mode</li>
+            <li><strong>Double-click</strong> on the curve to add a new point</li>
+            <li><strong>Right-click</strong> a knot to delete it (minimum 2 points)</li>
+            <li>Use <em>Reset handles</em> in the sidebar to revert to auto-computed Catmull-Rom tangents</li>
+        </ul>
+
+        <!-- ──────────────────────────────────────────── -->
+        <h2>Membrane Shapes</h2>
+        <table>
+            <tr><th>Shape</th><th>Description</th><th>Parameters</th></tr>
+            <tr><td>Linear</td><td>Flat membrane segment</td><td>Length</td></tr>
+            <tr><td>Circular</td><td>Closed circular bilayer (vesicle-like)</td><td>Radius</td></tr>
+            <tr><td>Elliptical</td><td>Closed elliptical bilayer</td><td>Width (rx), Height (ry)</td></tr>
+            <tr><td>Cristae</td><td>Mitochondrial inner membrane folds</td><td>Width, Depth, Count, Spacing</td></tr>
+            <tr><td>Bezier</td><td>Freeform curve with editable handles</td><td>Interactive control points</td></tr>
+        </table>
+        <p>Any shape can be converted to Bezier for fine-tuning by clicking the Bezier button in the shape nav.</p>
+
+        <!-- ──────────────────────────────────────────── -->
+        <h2>Lipid Composition</h2>
+        <p>
+            Lipids are distributed along the membrane using deterministic Bresenham-style dithering
+            for even, reproducible patterns. You can enable <strong>asymmetric leaflets</strong> to
+            set different compositions for the outer and inner leaflet, as found in biological membranes.
+        </p>
+
+        <h3>Available Lipid Types</h3>
+        <p>
+            29 built-in types including saturated (all-trans) and cis (unsaturated) variants.
+            Cis lipids feature a characteristic kink in the sn-2 acyl chain when "Show cis kinks" is enabled.
+        </p>
+        <table>
+            <tr><th>Category</th><th>Lipid Types</th></tr>
+            <tr><td>Phospholipids</td><td>PC, PE, PS, PI, PA, PG (+ cis variants)</td></tr>
+            <tr><td>Sphingolipids</td><td>SM, Ceramide</td></tr>
+            <tr><td>Sterols</td><td>Cholesterol</td></tr>
+            <tr><td>Cardiolipin</td><td>CL (+ cis-CL)</td></tr>
+            <tr><td>Plant/Bacterial</td><td>MGDG, DGDG, MGlcDG, DGlcDG, SQDG</td></tr>
+            <tr><td>Lyso-lipids</td><td>lysoPC, lysoPE (+ cis variants)</td></tr>
+            <tr><td>Oxidized</td><td>truncPC</td></tr>
+        </table>
+
+        <!-- ──────────────────────────────────────────── -->
+        <h2>Preset Compositions</h2>
+        <p>
+            Built-in presets provide biologically representative lipid compositions based on published lipidomics data.
+            These are simplified representations intended for schematic diagrams, not quantitative models.
+        </p>
+
+        <h3>Plasma Membrane</h3>
+        <table>
+            <tr><th>Leaflet</th><th>PC</th><th>SM</th><th>Chol</th><th>PE</th><th>PS</th><th>PI</th></tr>
+            <tr><td>Outer</td><td>40%</td><td>25%</td><td>25%</td><td>10%</td><td>—</td><td>—</td></tr>
+            <tr><td>Inner</td><td>20%</td><td>—</td><td>15%</td><td>35%</td><td>20%</td><td>10%</td></tr>
+        </table>
+        <p class="ref">
+            Based on: van Meer G, Voelker DR, Feigenson GW.
+            <em>Membrane lipids: where they are and how they behave.</em>
+            Nat Rev Mol Cell Biol. 2008;9(2):112-124.
+        </p>
+
+        <h3>Mitochondrial Inner Membrane</h3>
+        <table>
+            <tr><th>Lipid</th><th>PC</th><th>PE</th><th>CL</th><th>PI</th><th>PS</th></tr>
+            <tr><td>Ratio</td><td>35%</td><td>34%</td><td>18%</td><td>8%</td><td>5%</td></tr>
+        </table>
+        <p class="ref">
+            Based on: Horvath SE, Daum G.
+            <em>Lipids of mitochondria.</em>
+            Prog Lipid Res. 2013;52(4):590-614.
+        </p>
+
+        <h3>Bacterial Outer Membrane (E. coli-like)</h3>
+        <table>
+            <tr><th>Lipid</th><th>PE</th><th>PG</th><th>CL</th></tr>
+            <tr><td>Ratio</td><td>60%</td><td>25%</td><td>15%</td></tr>
+        </table>
+        <p class="ref">
+            Based on: Dowhan W.
+            <em>Molecular basis for membrane phospholipid diversity.</em>
+            Annu Rev Biochem. 1997;66:199-232.
+        </p>
+
+        <h3>Thylakoid Membrane</h3>
+        <table>
+            <tr><th>Lipid</th><th>MGDG</th><th>DGDG</th><th>PG</th><th>SQDG</th></tr>
+            <tr><td>Ratio</td><td>50%</td><td>25%</td><td>15%</td><td>10%</td></tr>
+        </table>
+        <p class="ref">
+            Based on: Dorne AJ, Joyard J, Douce R.
+            <em>Do thylakoids really contain phosphatidylcholine?</em>
+            Proc Natl Acad Sci USA. 1990;87(1):71-74.
+        </p>
+
+        <h3>ER Membrane</h3>
+        <table>
+            <tr><th>Lipid</th><th>PC</th><th>PE</th><th>PI</th><th>PS</th><th>Chol</th></tr>
+            <tr><td>Ratio</td><td>55%</td><td>25%</td><td>10%</td><td>5%</td><td>5%</td></tr>
+        </table>
+        <p class="ref">
+            Based on: van Meer G, Voelker DR, Feigenson GW.
+            <em>Membrane lipids: where they are and how they behave.</em>
+            Nat Rev Mol Cell Biol. 2008;9(2):112-124.
+        </p>
+
+        <!-- ──────────────────────────────────────────── -->
+        <h2>Proteins</h2>
+        <p>Add transmembrane and peripheral proteins to your diagram. Available types:</p>
+        <table>
+            <tr><th>Type</th><th>Description</th></tr>
+            <tr><td>Single-pass TM</td><td>Single alpha-helix spanning the bilayer</td></tr>
+            <tr><td>Multi-pass TM</td><td>Multiple alpha-helices (configurable number of passes)</td></tr>
+            <tr><td>Beta barrel</td><td>Beta-sheet barrel (e.g., porins)</td></tr>
+            <tr><td>Peripheral</td><td>Protein attached to the membrane surface</td></tr>
+            <tr><td>GPI-anchored</td><td>Protein linked via glycosylphosphatidylinositol anchor</td></tr>
+            <tr><td>Ion channel</td><td>Pore-forming channel protein</td></tr>
+            <tr><td>ATP synthase</td><td>F1F0 ATP synthase complex</td></tr>
+        </table>
+
+        <!-- ──────────────────────────────────────────── -->
+        <h2>Overlays</h2>
+
+        <h3>Annotations</h3>
+        <ul>
+            <li><strong>Legend</strong> — color-coded key for active lipid types</li>
+            <li><strong>Leaflet labels</strong> — inner/outer leaflet text</li>
+            <li><strong>Scale bar</strong> — approximate nm scale reference</li>
+            <li><strong>Thickness markers</strong> — bracket showing ~4 nm bilayer width</li>
+            <li><strong>Compartment labels</strong> — top/bottom text (e.g., "Extracellular", "Cytoplasm")</li>
+        </ul>
+
+        <h3>Scissor Mode</h3>
+        <p>
+            Indicates phospholipase cleavage sites. Choose from PLA1, PLA2, PLC, or PLD enzymes.
+            Multiple scissors can be placed at different positions and leaflets. The scissor icon
+            is oriented with blades pointing toward the target leaflet.
+        </p>
+
+        <h3>Pore Mode</h3>
+        <p>
+            Adds toroidal pores to the membrane, useful for illustrating antimicrobial peptide activity
+            or membrane permeabilization. Multiple pores can be placed at different positions along the membrane.
+        </p>
+
+        <h3>Lipid Rafts</h3>
+        <p>
+            Highlights lipid raft regions with increased membrane thickness. Multiple raft regions
+            can be defined, each with independent start and end positions along the membrane.
+        </p>
+
+        <!-- ──────────────────────────────────────────── -->
+        <h2>Export</h2>
+        <ul>
+            <li><strong>SVG</strong> — scalable vector graphic, ideal for publication figures (editable in Illustrator, Inkscape, etc.)</li>
+            <li><strong>PNG</strong> — rasterized at 2x resolution for retina displays</li>
+        </ul>
+
+        <h3>Saved Configurations</h3>
+        <p>
+            Click "Save current" in the left nav to persist your diagram configuration locally.
+            Saved configurations can be reloaded or deleted at any time.
+        </p>
+
+        <!-- ──────────────────────────────────────────── -->
+        <div class="credits">
+            <h2 style="border:none; margin-top:0; padding:0;">Credits</h2>
+            <p>
+                <strong>Membrana</strong> was created by
+                <strong>Erick Leite Bastos</strong><br>
+                University of S&atilde;o Paulo, S&atilde;o Paulo, Brazil
+            </p>
+            <p style="margin-top:12px;">
+                Questions and comments:<br>
+                <a href="mailto:elbastos@usp.br">elbastos@usp.br</a><br>
+                <a href="https://www.bastoslab.org" target="_blank" rel="noopener">www.bastoslab.org</a>
+            </p>
+            <p style="margin-top:20px; color:var(--text-muted); font-size:11px;">
+                Membrana v0.2 &middot; Built with Python, FastAPI, and vanilla JavaScript
+            </p>
+        </div>
+    </div>
+</body>
+</html>
